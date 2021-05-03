@@ -2,6 +2,7 @@
 import './App.css';
 import './fontawesome/css/all.min.css';
 import './css/templatemo-comparto.css';
+import img from './img/comparto-image-01.jpg';
 function Header(props) {
   return (
     <div class="tm-site-header tm-mb-1">
@@ -29,7 +30,7 @@ function Main() {
  <section class="tm-mb-1" id="about">
             <div class="tm-row tm-about-row">
             <div class="tm-section-1-l">
-                     <img src="img/comparto-image-01.jpg" alt="About image" class="tm-img-responsive" />
+                     <img src={img} alt=""  />
                 </div>
                 <article class="tm-section-1-r tm-bg-color-8">
                     <h2 class="tm-mb-2 tm-title-color">.01 Comparto CSS Layout</h2>
