@@ -3,7 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App'; 
 ReactDOM.render(
-  React.createElement("h1",{style:{color:"blue"}},"Hej"),
+  <ul>
+  <li>Mon</li>
+    <li>Tue</li>
+    <li>Wed</li>
+  </ul>,
   document.getElementById('root')
 );
  
