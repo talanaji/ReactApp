@@ -1,9 +1,9 @@
 import './App.css';
-function Header() {
+function Header(props) {
   return (
     <div class="tm-site-header tm-mb-1">
       <div class="tm-site-name-container tm-bg-color-1">
-        <h1 class="tm-text-white">Comparto</h1>
+        <h1 class="tm-text-white">{props.name}</h1>
       </div>
       <div class="tm-nav-container tm-bg-color-8">
         <nav class="tm-nav" id="tm-nav">
@@ -72,10 +72,10 @@ function Main() {
   );
 }
 
-function Footer() {
+function Footer(props) {
   return (
     <footer class="text-center tm-mb-1">
-      <p>Copyright &copy; 2020 </p>
+      <p>Copyright &copy; {props.year} </p>
     </footer>
   );
 }
@@ -83,9 +83,9 @@ function Footer() {
 function App() {
   return (
     <div className="App">
-      <Header />
+      <Header name="Comparto" />
       <Main />
-      <Footer />
+      <Footer year ={new Date().getFullYear()} />
     </div>
   );
 }
