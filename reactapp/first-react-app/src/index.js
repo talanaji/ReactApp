@@ -7,6 +7,6 @@ function AppTwo() {
   return <h1>This is the second app</h1>;
 }
 ReactDOM.render(
-  <App />,
+  <App authorized={true} />,
   document.getElementById("root")
 );

@@ -89,14 +89,28 @@ const menu=[
 ];
 const menuObjects = menu.map((menu_el,i)=>({id:i, title:menu_el})); 
 console.log(menuObjects);
-function App() {
-  return (
-    <>
+
+function SecretComp(){
+  return <h1>Secret Info </h1>;
+}
+function RegularComp(){
+  return <h1>public Info </h1>;
+}
+function App(props) {
+  return (<>{props.authorized? <SecretComp/>:<RegularComp/>}</>);
+  /*
+  if(props.authorized)
+  return <SecretComp/>
+  else 
+  return <RegularComp/>*/
+  /*return (
+
+    <SecretComp>
       <Header name="Comparto" menu={menuObjects} />
       <Main />
       <Footer year ={new Date().getFullYear()} />
-    </>
-  );
+    </SecretComp>
+  );*/
 }
 
 export default App;
