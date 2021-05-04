@@ -1,36 +1,51 @@
 import React from "react";
+import {useLocation} from 'react-router-dom';
+import g1 from "./img/gallery/gallery-item-01.jpg"; 
+import g2 from "./img/gallery/gallery-item-02.jpg"; 
+import g3 from "./img/gallery/gallery-item-03.jpg"; 
+import g4 from "./img/gallery/gallery-item-04.jpg"; 
+import g5 from "./img/gallery/gallery-item-05.jpg"; 
+import g6 from "./img/gallery/gallery-item-06.jpg"; 
+import g7 from "./img/gallery/gallery-item-07.jpg"; 
+import g8 from "./img/gallery/gallery-item-08.jpg"; 
+import g9 from "./img/gallery/gallery-item-09.jpg"; 
+import g10 from "./img/gallery/gallery-item-10.jpg"; 
 import img1 from "./img/comparto-image-01.jpg";
 import img2 from "./img/comparto-image-02.jpg";
+/*import {Link} from "react-router-dom";
+
+<nav className="tm-nav" id="tm-nav2">
+  <Link to="/about">About</Link>
+  <Link to="/contact">Contact</Link> 
+</nav>
+*/
 export function Header(){
-  return ( <div class="tm-site-header tm-mb-1">
-            <div class="tm-site-name-container tm-bg-color-1">
-                <h1 class="tm-text-white">Comparto</h1>
+  return ( <div className="tm-site-header tm-mb-1">
+            <div className="tm-site-name-container tm-bg-color-1">
+                <h1 className="tm-text-white">Comparto</h1>
             </div>
-            <div class="tm-nav-container tm-bg-color-8">
-                <nav class="tm-nav" id="tm-nav">
+            <div className="tm-nav-container tm-bg-color-8">
+            
+                <nav className="tm-nav" id="tm-nav">
                     <ul>
-                        <li class="tm-nav-item current">
-                            <a href="#about" class="tm-nav-link">
-                                <span class="tm-mb-1">.01</span>
-                                <span>About</span>
+                        <li className="tm-nav-item current">
+                            <a href="/" className="tm-nav-link">
+                                 <span>Home</span>
                             </a>
                         </li>
-                        <li class="tm-nav-item">
-                            <a href="#services" class="tm-nav-link">
-                                <span class="tm-mb-1">.02</span>
-                                <span>Services</span>
+                        <li className="tm-nav-item  ">
+                            <a href="/about" className="tm-nav-link">
+                                 <span>About</span>
+                            </a>
+                        </li> 
+                        <li className="tm-nav-item">
+                            <a href="/gallery" className="tm-nav-link">
+                                 <span>Gallery</span>
                             </a>
                         </li>
-                        <li class="tm-nav-item">
-                            <a href="#gallery" class="tm-nav-link">
-                                <span class="tm-mb-1">.03</span>
-                                <span>Gallery</span>
-                            </a>
-                        </li>
-                        <li class="tm-nav-item">
-                            <a href="#contact" class="tm-nav-link">
-                                <span class="tm-nav-text tm-mb-1">.04</span>
-                                <span class="tm-nav-text">Contact</span>
+                        <li className="tm-nav-item">
+                            <a href="/contact" className="tm-nav-link">
+                                 <span className="tm-nav-text">Contact</span>
                             </a>
                         </li>
                     </ul>
@@ -65,20 +80,20 @@ export function Home() {
         </div>
       </div>
       <div className="tm-section-2-r">
-        <img src={img2} alt="Services image" className="tm-img-responsive" />
+        <img src={img2} alt="" className="tm-img-responsive" />
       </div>
     </div>
   );
 }
 export function About() {
   return (
-    <div class="tm-mb-1" id="about">
-      <div class="tm-row tm-about-row">
-        <div class="tm-section-1-l">
-          <img src={img1} alt="About image" class="tm-img-responsive" />
+    <div className="tm-mb-1" id="about">
+      <div className="tm-row tm-about-row">
+        <div className="tm-section-1-l">
+          <img alt="" src={img1}  className="tm-img-responsive" />
         </div>
-        <article class="tm-section-1-r tm-bg-color-8">
-          <h2 class="tm-mb-2 tm-title-color">.01 Comparto CSS Layout</h2>
+        <article className="tm-section-1-r tm-bg-color-8">
+          <h2 className="tm-mb-2 tm-title-color">.01 Comparto CSS Layout</h2>
           <p>
             <a
               rel="nofollow"
@@ -108,7 +123,7 @@ export function About() {
             Fusce at libero dui.
           </p>
 
-          <a href="#services" class="tm-btn tm-btn-1 tm-link-to-services">
+          <a href="#services" className="tm-btn tm-btn-1 tm-link-to-services">
             More Detail
           </a>
         </article>
@@ -119,12 +134,13 @@ export function About() {
 
 export function Contact() {
   return (
-    <div id="contact" class="tm-bg-color-5 tm-mb-3">
-      <h2 class="tm-text-white tm-contact-title">.04 Contact Us</h2>
-      <div class="tm-bg-color-white tm-contact-main">
-        <div class="map-outer">
-          <div class="gmap-canvas">
-            <iframe
+    <div id="contact" className="tm-bg-color-5 tm-mb-3">
+      <h2 className="tm-text-white tm-contact-title">.04 Contact Us</h2>
+      <div className="tm-bg-color-white tm-contact-main">
+        <div className="map-outer">
+          <div className="gmap-canvas">
+            <iframe 
+            title="ifram"
               width="100%"
               height="400"
               id="gmap-canvas"
@@ -136,55 +152,55 @@ export function Contact() {
             ></iframe>
           </div>
         </div>
-        <div class="contact-form-outer">
+        <div className="contact-form-outer">
           <form
             id="contact-form"
             action=""
             method="POST"
-            class="tm-bg-color-6 tm-contact-form"
+            className="tm-bg-color-6 tm-contact-form"
           >
-            <div class="form-group">
+            <div className="form-group">
               <input
                 type="text"
                 name="name"
-                class="form-control"
+                className="form-control"
                 placeholder="Name"
                 required=""
               />
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <input
                 type="email"
                 name="email"
-                class="form-control"
+                className="form-control"
                 placeholder="Email"
                 required=""
               />
             </div>
-            <div class="form-group">
+            <div className="form-group">
               <textarea
                 rows="4"
                 name="message"
-                class="form-control"
+                className="form-control"
                 placeholder="Message..."
                 required=""
               ></textarea>
             </div>
             <div>
-              <button type="submit" class="ml-auto tm-btn tm-btn-3">
+              <button type="submit" className="ml-auto tm-btn tm-btn-3">
                 Send
               </button>
             </div>
           </form>
         </div>
-        <div class="contact-info-outer">
-          <div class="tm-bg-color-6 contact-info">
+        <div className="contact-info-outer">
+          <div className="tm-bg-color-6 contact-info">
             <p>
               Pellentesque egestas odio sed tellus dictum, vel lobortis ante
               vehicula.
             </p>
             <p>Morbi eget accumsan libero, non tincidunt felis.</p>
-            <p class="tm-mb-0">
+            <p className="tm-mb-0">
               Tel: <a href="tel:0100200990">010-020-0990</a>
             </p>
             <p>
@@ -197,8 +213,127 @@ export function Contact() {
   );
 }
 
-export function Footer(){
-  return (        <footer class="text-center tm-mb-1">
-  <p>Copyright &copy; {Date.now}  </p>
+export function Gallery(){
+  return (    <div className="tm-bg-color-4 tm-mb-3 tm-gallery-section" id="gallery">
+             
+            <div className="tm-gallery-outer">
+                <div className="tm-gallery" id="tm-gallery">
+                    <div className="tm-gallery-item nature">
+                        <figure className="effect-bubba">
+                            <img alt=""src={g1}  className="tm-img-responsive" />
+                            <figcaption>
+                                <h2>Too <span>CSS</span></h2>
+                                <p>It is a great blog you should explore.</p>
+                                
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div className="tm-gallery-item animals">
+                        <figure className="effect-bubba">
+                            <img alt=""src={g2}   className="tm-img-responsive" />
+                            <figcaption>
+                                <h2>Templates</h2>
+                                <p>best templates come from TemplateMo website.</p>
+                                
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div className="tm-gallery-item nature">
+                        <figure className="effect-bubba">
+                            <img alt=""src={g6}  className="tm-img-responsive" />
+                            <figcaption>
+                                <h2>Web <span>Design</span></h2>
+                                <p>This is our special design work.</p>
+                                
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div className="tm-gallery-item nature">
+                        <figure className="effect-bubba">
+                            <img alt=""src={g5}  className="tm-img-responsive" />
+                            <figcaption>
+                                <h2>Free <span>HTML</span></h2>
+                                <p>HTML layouts are easy to edit.</p>
+                                
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div className="tm-gallery-item animals">
+                        <figure className="effect-bubba">
+                            <img alt=""src={g3}  className="tm-img-responsive" />
+                            <figcaption>
+                                <h2>Just <span>Art</span></h2>
+                                <p>You can create your own art website.</p>
+                                
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div className="tm-gallery-item animals">
+                        <figure className="effect-bubba">
+                            <img alt=""src={g4}  className="tm-img-responsive" />
+                            <figcaption>
+                                <h2>Pro <span>Display</span></h2>
+                                <p>You can make your artwork gallery.</p>
+                                
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div className="tm-gallery-item peopl">
+                        <figure className="effect-bubba">
+                            <img alt=""src={g7}  className="tm-img-responsive" />
+                            <figcaption>
+                                <h2>The <span>Nature</span></h2>
+                                <p>You can create your own HTML website.</p>
+                                
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div className="tm-gallery-item people">
+                        <figure className="effect-bubba">
+                            <img alt=""src={g8}  className="tm-img-responsive" />
+                            <figcaption>
+                                <h2>Color <span>Art</span></h2>
+                                <p>You can create your own CSS website.</p>
+                                
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div className="tm-gallery-item people">
+                        <figure className="effect-bubba">
+                            <img alt=""src={g9}  className="tm-img-responsive" />
+                            <figcaption>
+                                <h2>Take it <span>easy</span></h2>
+                                <p>You can create your own art gallery.</p>
+                                
+                            </figcaption>
+                        </figure>
+                    </div>
+                    <div className="tm-gallery-item people">
+                        <figure className="effect-bubba">
+                            <img alt=""src={g10}  className="tm-img-responsive" />
+                            <figcaption>
+                                <h2>Share <span>This</span></h2>
+                                <p>You can make your own image gallery.</p>
+                                
+                            </figcaption>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>  
+        
+  );}
+
+export function Footer(props){
+  return (        <footer className="text-center tm-mb-1">
+  <p>Copyright &copy; {props.year}   </p>
 </footer>);
+}
+
+export function Whoops404(){
+  let location = useLocation();
+  console.log(location);
+  return(
+    <div><h1>Error 404: This page not exist </h1></div>
+  ); 
 }
