@@ -3,7 +3,7 @@ import "./App.css";
 import "./fontawesome/css/all.min.css";
 import "./css/templatemo-comparto.css";
 import img from "./img/comparto-image-01.jpg";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useReducer } from "react";
 function Header(props) {
   return (
     <div className="tm-site-header tm-mb-1">
@@ -121,7 +121,26 @@ function RegularComp() {
 }
 
 function App(/*props*/) {
-  const [emotion, setEmotion] = useState("happy");
+  const [checked,toggle]= useReducer(
+    //fn
+    (checked)=>!checked,
+    //init state
+    false
+  );
+  //const [checked, setChecked ]= useState(false);
+  /*function toggle(){
+    setChecked((checked)=>!checked);
+  }*/
+  return(
+    <>
+    <input
+    type="checkbox"
+    value={checked}
+    onChange={toggle}/>
+    <p>{checked?"checked":"not checked"}</p>
+    </>
+  );
+ /*const [emotion, setEmotion] = useState("happy");
   const [second, setSecond] = useState("tired");
 
   useEffect(()=>{
@@ -138,7 +157,7 @@ function App(/*props*/) {
       <button onClick={() => setEmotion("sad")}>sad</button>
       <button onClick={() => setEmotion("angry")}>angry</button>
     </>
-  );
+  );*/
 
   //return (<>{props.authorized? <SecretComp/>:<RegularComp/>}</>);
   /*
