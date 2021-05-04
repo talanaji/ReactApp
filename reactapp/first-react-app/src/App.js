@@ -3,7 +3,7 @@ import "./App.css";
 import "./fontawesome/css/all.min.css";
 import "./css/templatemo-comparto.css";
 import img from "./img/comparto-image-01.jpg";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 function Header(props) {
   return (
     <div className="tm-site-header tm-mb-1">
@@ -122,9 +122,18 @@ function RegularComp() {
 
 function App(/*props*/) {
   const [emotion, setEmotion] = useState("happy");
+  const [second, setSecond] = useState("tired");
+
+  useEffect(()=>{
+    console.log(`It's ${emotion}`);
+  },[emotion]);
+  useEffect(()=>{
+    console.log(`It's ${second}`);
+  });
   return (
     <>
-      <h1>Currect state {emotion}</h1>
+      <h1>Currect state is {emotion} & {second}</h1>
+      <button onClick={() => setSecond("crabby")}>crabby</button>
       <button onClick={() => setEmotion("happy")}>happy</button>
       <button onClick={() => setEmotion("sad")}>sad</button>
       <button onClick={() => setEmotion("angry")}>angry</button>
