@@ -4,7 +4,10 @@ import "./fontawesome/css/all.min.css";
 import "./css/templatemo-comparto.css";
 import React, { useState, useEffect } from "react";
 
-function App({ login }) {
+function App() {
+  return (
+  <h1>Hello</h1>);
+  /*
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
@@ -27,7 +30,7 @@ function App({ login }) {
       <p>{data.location}</p>
       <img alt="" src={data.avatar_url} />
     </div>
-  );
+  );*/
 }
 
 export default App;
